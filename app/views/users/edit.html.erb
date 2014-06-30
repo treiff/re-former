@@ -1,0 +1,29 @@
+<h1>I am the edit page</h1>
+
+<% if @user.errors.any? %>
+    <div>
+      <h3>
+        This form contains <%= pluralize(@user.errors.count, "error") %>:
+      </h3>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+
+ <%= form_for @user do |f| %>
+ 	<%= f.label 'Desired Username:' %><br> 
+ 	<%= f.text_field :username %><br>
+
+ 	<%= f.label 'email:' %><br>
+	<%= f.text_field :email, :value => "example@example.com" %><br>
+
+	<%= f.label 'password:' %><br>
+ 	<%= f.text_field :password %><br>
+
+ 	<%= f.submit %>
+ <% end %>
