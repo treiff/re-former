@@ -16,14 +16,14 @@
 
 
  <%= form_for @user do |f| %>
- 	<%= f.label 'Desired Username:' %><br> 
- 	<%= f.text_field :username %><br>
+  <%= f.label 'Desired Username:' %><br> 
+  <%= f.text_field :username %><br>
 
- 	<%= f.label 'email:' %><br>
-	<%= f.text_field :email, :value => "example@example.com" %><br>
+  <%= f.label 'email:' %><br>
+  <%= f.text_field :email, :value => "example@example.com" %><br>
 
-	<%= f.label 'password:' %><br>
- 	<%= f.text_field :password %><br>
+  <%= f.label 'password:' %><br>
+  <%= f.text_field :password %><br>
 
- 	<%= f.submit %>
+  <%= f.submit %>
  <% end %>
